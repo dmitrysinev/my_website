@@ -9,7 +9,7 @@ body {
 .main-title {
     text-align: center;
     margin-top: 30px;
-    font-size: 2em; /* Можно изменить размер шрифта по желанию */
+    font-size: 3em; /* Можно изменить размер шрифта по желанию */
     color: white; /* И цвет текста тоже */
 }
 
