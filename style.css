@@ -8,9 +8,9 @@ body {
 
 .main-title {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 30px;
     font-size: 2em; /* Можно изменить размер шрифта по желанию */
-    color: #333; /* И цвет текста тоже */
+    color: white; /* И цвет текста тоже */
 }
 
 .video-grid {
