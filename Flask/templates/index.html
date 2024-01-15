@@ -9,6 +9,14 @@
 </head>
 <body>
     <h1 class="main-title">Мои работы с Искусственным Интеллектом</h1>
+
+    <form id="myForm">
+        <input type="text" name="name" placeholder="Введите ваше имя">
+        <button type="submit">Отправить</button>
+    </form>
+
+    <div id="result"></div>
+
     <div class="video-grid">
         <div class="video-item">
             <h2>ИИ-новинки CES 2024: Что Представили SONY, LG и SAMSUNG?</h2>
@@ -31,8 +39,23 @@
             <iframe src="https://www.youtube.com/embed/Qo
 OsFTgAf9M" frameborder="0" allowfullscreen loading="lazy"></iframe>
 </div>
-</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#myForm').submit(function(e){
+                e.preventDefault();
+                $.ajax({
+                    url: '/process',
+                    method: 'POST',
+                    data: $(this).serialize(),
+                    success: function(response){
+                        $('#result').html(response.greeting);
+                    }
+                });
+            });
+        });
+    </script>
 
 </body>
 </html>
-```
